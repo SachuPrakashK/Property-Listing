@@ -1,0 +1,43 @@
+<div class='info'>
+    <h4>{{listing?.title}}</h4>
+    <h5>Price:{{listing?.price}}</h5>
+    <h5>{{listing?.locality}}</h5>
+    <p>Detail:{{listing?.details}}</p>
+    <span>
+        <button type="button" class="btn btn-primary" *ngIf="userService.loggedIn()" (click)='showEditForm()'>Edit</button>&nbsp;&nbsp;&nbsp;
+        <button type="button" class="btn btn-danger" *ngIf="userService.loggedIn()" (click)='deleteListing()'>Delete</button>
+    </span>
+</div>
+
+<div class="form-wrrap" *ngIf="showForm">
+    <h3>Edit Listing</h3>
+    <form [formGroup]="editListingForm" (ngSubmit)="editListing()">
+
+
+        <div class="form-group">
+            <label for="title">Title:</label>
+            <input type="text" name="title" placeholder="Enter the title" formControlName="title"
+                [(ngModel)]="listing.title" />
+        </div>
+
+        <div class="form-group">
+            <label for="price">Price:</label>
+            <input type="text" name="price" placeholder="Enter the price" formControlName="price"
+                [(ngModel)]="listing.price" />
+        </div>
+
+        <div class="form-group">
+            <label for="locality">Locality:</label>
+            <input type="text" name="locality" placeholder="Enter the locality" formControlName="locality"
+                [(ngModel)]="listing.locality" />
+        </div>
+
+        <div class="form-group">
+            <label for="details">Details:</label>
+            <input type="text" name="details" placeholder="Enter the details" formControlName="details"
+                [(ngModel)]="listing.details" />
+        </div>
+
+        <input type="submit" value="Edit" [disabled]="!editListingForm.valid" />
+    </form>
+</div>

@@ -1,0 +1,19 @@
+.info{
+    margin: 50px auto 0;
+    padding: 10px;
+    background: skyblue;
+    border-radius: 20px;
+    text-align: center;
+    width: 400px;
+    height: 200px;
+}
+
+.info h4, h5{
+    font-weight: 700;
+}
+
+@media only screen and (max-width: 480px){
+    .info{
+        width: 300px;
+    }
+}

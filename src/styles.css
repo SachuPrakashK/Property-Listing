@@ -1,0 +1,112 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+    font-family: Arial,Helvetica,sans-serif;
+    background-image: linear-gradient(to right, rgb(239, 247, 127) ,rgb(246, 255, 115), rgb(255, 255, 100), rgb(246, 255, 115), rgb(239, 247, 127));
+}
+/* main{
+    background-image: linear-gradient(to right, rgb(243, 247, 191), yellow, rgb(243, 247, 191));
+} */
+
+.listings{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-left: 0;
+
+}
+.listings li{
+    list-style: none;
+    width:30%;
+    padding:20px;
+    background: #fff;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.listings li h5{
+    margin:10px 0;
+}
+
+.listings button{
+    border-radius: 20px;
+}
+
+main{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.info-wrrap {
+    max-width: 500px;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+    margin: 15px auto;
+    border-radius: 10px;
+    text-align: center;
+    
+  }
+
+  .form-wrrap {
+    max-width: 500px;
+    min-width: 300px;
+    padding: 20px;
+    background: rgb(250, 192, 116);
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2) ;
+    margin: 20px auto 40px;
+    border-radius: 10px;
+  }
+  .form-wrrap h3{
+      text-align: center;
+  }
+  .form-wrrap label{
+      margin: 0;
+  }
+input {
+    width: 100%;
+    height: 40px;
+}
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    background: #ffffff;
+    border: 2px solid #4285f4;
+    padding-left: 10px;
+    color: #000000;
+    font-size: 15px;
+    border-radius: 5px;
+}
+input[type="submit"] {
+    background: #4285f4;
+    border: 2px solid #4285f4;;
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+    line-height: 35px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 770px){
+    .listings{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .listings li{
+        width: 50%;
+    }
+}
+@media only screen and (max-width: 410px){
+    .listings li{
+        width: 70%;
+    }
+}
